@@ -1291,6 +1291,28 @@ select { cursor: pointer; }
 .add-optional { color: var(--text-light); font-weight: 400; }
 
 /* ── Form trust copy ── */
+/* ── Form submission result messages ── */
+.form-result {
+  margin-top: 14px;
+  font-size: .88rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.55;
+  padding: 12px 16px;
+  border-radius: var(--radius);
+}
+.form-result--success {
+  color: #1e7e34;
+  background: #eafaf1;
+  border: 1px solid #b7e4c7;
+}
+.form-result--error {
+  color: #c0392b;
+  background: #fdf3f2;
+  border: 1px solid #f5c6c2;
+}
+
+/* ── Form trust copy ── */
 .form-trust-copy {
   margin-top: 16px;
   padding: 14px 16px;

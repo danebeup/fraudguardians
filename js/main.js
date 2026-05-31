@@ -155,47 +155,71 @@ document.addEventListener('click', (e) => {
   if (removeBtn) hideEmployeeSlot(parseInt(removeBtn.dataset.removeEmployee));
 });
 
-// ── Contact form handler
+// ── Contact form handler — Web3Forms
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
   contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
+
     const btn = contactForm.querySelector('button[type="submit"]');
-    const original = btn.textContent;
+    const originalText = btn.textContent;
+
+    // Clear any previous result messages
+    contactForm.querySelectorAll('.form-result').forEach(el => el.remove());
+
     btn.textContent = 'Submitting…';
     btn.disabled = true;
 
-    await new Promise(r => setTimeout(r, 1200));
-
-    btn.textContent = '✓ Audit Request Received';
-    btn.style.background = '#27ae60';
-    btn.style.borderColor = '#27ae60';
-
-    const note = document.createElement('p');
-    note.style.cssText = 'color:#27ae60;font-size:.88rem;margin-top:14px;text-align:center;font-weight:500;line-height:1.5;';
-    note.textContent = 'Thank you. We\'ll send your free exposure audit to the email you provided within 24 hours.';
-    contactForm.appendChild(note);
-
-    setTimeout(() => {
-      btn.textContent = original;
-      btn.disabled = false;
-      btn.style.background = '';
-      btn.style.borderColor = '';
-      contactForm.reset();
-      // Re-hide optional employee slots after reset
+    const resetSlots = () => {
       ['employee-2', 'employee-3'].forEach(id => {
         const el = document.getElementById(id);
         if (el) { el.style.display = 'none'; el.setAttribute('aria-hidden', 'true'); }
       });
-      ['add-emp2-trigger'].forEach(id => {
-        const el = document.getElementById(id);
-        if (el) { el.style.display = 'block'; el.removeAttribute('aria-hidden'); }
+      const t2 = document.getElementById('add-emp2-trigger');
+      if (t2) { t2.style.display = 'block'; t2.removeAttribute('aria-hidden'); }
+      const t3 = document.getElementById('add-emp3-trigger');
+      if (t3) { t3.style.display = 'none'; t3.setAttribute('aria-hidden', 'true'); }
+    };
+
+    try {
+      const formData = new FormData(contactForm);
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
       });
-      ['add-emp3-trigger'].forEach(id => {
-        const el = document.getElementById(id);
-        if (el) { el.style.display = 'none'; el.setAttribute('aria-hidden', 'true'); }
-      });
-      note.remove();
-    }, 7000);
+
+      const data = await response.json();
+
+      if (data.success) {
+        btn.textContent = '✓ Request Submitted';
+        btn.style.background = '#27ae60';
+        btn.style.borderColor = '#27ae60';
+
+        const msg = document.createElement('p');
+        msg.className = 'form-result form-result--success';
+        msg.textContent = 'Thank you. We\'ll send your free exposure audit to the email you provided within 24 hours.';
+        contactForm.appendChild(msg);
+
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.disabled = false;
+          btn.style.background = '';
+          btn.style.borderColor = '';
+          contactForm.reset();
+          resetSlots();
+          msg.remove();
+        }, 6000);
+      } else {
+        throw new Error(data.message || 'Submission was not accepted.');
+      }
+    } catch (err) {
+      btn.textContent = originalText;
+      btn.disabled = false;
+
+      const errMsg = document.createElement('p');
+      errMsg.className = 'form-result form-result--error';
+      errMsg.textContent = 'Something went wrong. Please try again or email us directly at hello@fraudguardians.com.';
+      contactForm.appendChild(errMsg);
+    }
   });
 }
