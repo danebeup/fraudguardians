@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FraudGuardians — Employee Exposure Audits &amp; Ongoing Protection for Professional Firms</title>
+  <meta name="description" content="FraudGuardians finds and documents employee personal data exposed online, then helps your firm eliminate it and monitor for new exposures — before attackers use it." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231B3461'/><path d='M16 6 L23 10 L23 18 C23 22 16 26 16 26 C16 26 9 22 9 18 L9 10 Z' fill='%23C8A84B'/></svg>" />
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <div class="nav__logo-mark">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L20 6V13C20 17.4 16.5 21.5 12 23C7.5 21.5 4 17.4 4 13V6L12 2Z"/>
+        </svg>
+      </div>
+      FraudGuardians
+    </a>
+
+    <div class="nav__links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#pricing">Our Approach</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="nav__cta">
+      <a href="contact.html" class="btn btn-primary">Request a Free Exposure Audit</a>
+    </div>
+
+    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── Hero ── -->
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="hero__inner">
+    <div class="hero__content">
+      <span class="eyebrow">Business &amp; Employee Exposure Audits</span>
+      <h1 id="hero-heading">Find and Eliminate Your Firm's Exposed Data Before Attackers Use It</h1>
+      <p class="hero__lead">
+        We audit your company domain and your employees' personal data across the open web, then help you eliminate the exposure and keep it from returning.
+      </p>
+      <div class="hero__actions">
+        <a href="contact.html" class="btn btn-primary btn-lg">Request a Free Exposure Audit</a>
+      </div>
+      <p class="hero__microcopy">No software to install. No commitment. Audit delivered within 24 hours.</p>
+      <div class="hero__trust">
+        <span class="hero__trust-text">Built for</span>
+        <div class="hero__trust-badges">
+          <span class="hero__trust-badge">Real Estate</span>
+          <span class="hero__trust-badge">Mortgage</span>
+          <span class="hero__trust-badge">Financial Advisory</span>
+          <span class="hero__trust-badge">Law Firms</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__card" aria-hidden="true">
+      <div class="hero__card-label">Sample Exposure Summary</div>
+      <div class="exposure-list">
+        <div class="exposure-item">
+          <div class="exposure-item__icon">🏠</div>
+          <div class="exposure-item__text">
+            <span class="exposure-item__label">Home Address</span>
+            <span class="exposure-item__sub">Found on 4 public data aggregators</span>
+          </div>
+          <span class="exposure-item__badge badge-high">High Risk</span>
+        </div>
+        <div class="exposure-item">
+          <div class="exposure-item__icon">📧</div>
+          <div class="exposure-item__text">
+            <span class="exposure-item__label">Personal Email</span>
+            <span class="exposure-item__sub">Leaked in 3 data breaches</span>
+          </div>
+          <span class="exposure-item__badge badge-high">High Risk</span>
+        </div>
+        <div class="exposure-item">
+          <div class="exposure-item__icon">🔑</div>
+          <div class="exposure-item__text">
+            <span class="exposure-item__label">Password Hash</span>
+            <span class="exposure-item__sub">Recovered from breach database</span>
+          </div>
+          <span class="exposure-item__badge badge-high">Critical</span>
+        </div>
+        <div class="exposure-item exposure-item--secondary">
+          <div class="exposure-item__icon">📞</div>
+          <div class="exposure-item__text">
+            <span class="exposure-item__label">Mobile Number</span>
+            <span class="exposure-item__sub">Linked to personal profiles</span>
+          </div>
+          <span class="exposure-item__badge badge-medium">Medium Risk</span>
+        </div>
+        <div class="exposure-item exposure-item--secondary">
+          <div class="exposure-item__icon">👤</div>
+          <div class="exposure-item__text">
+            <span class="exposure-item__label">Family Members</span>
+            <span class="exposure-item__sub">Identified via public social profiles</span>
+          </div>
+          <span class="exposure-item__badge badge-medium">Medium Risk</span>
+        </div>
+      </div>
+      <div class="hero__card-footer">
+        <span class="hero__card-footer-text">Overall exposure score</span>
+        <div class="hero__card-score">78<span>/100</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Stats Bar ── -->
+<div class="stats-bar">
+  <div class="stats-bar__inner">
+    <div>
+      <span class="stat__number">91%</span>
+      <p class="stat__label">of cyberattacks start with phishing or social engineering</p>
+      <p class="stat__source">IBM X-Force, 2023</p>
+    </div>
+    <div>
+      <span class="stat__number">12B+</span>
+      <p class="stat__label">user credentials exposed in known public breach databases</p>
+      <p class="stat__source">HaveIBeenPwned, 2024</p>
+    </div>
+    <div>
+      <span class="stat__number">$4.45M</span>
+      <p class="stat__label">average cost of a data breach caused by social engineering</p>
+      <p class="stat__source">IBM Cost of a Data Breach, 2023</p>
+    </div>
+    <div>
+      <span class="stat__number">24 hrs</span>
+      <p class="stat__label">to receive your firm's complete employee exposure report</p>
+      <p class="stat__source">FraudGuardians delivery standard</p>
+    </div>
+  </div>
+</div>
+
+<!-- ── How It Works ── -->
+<section class="section section--alt" id="how-it-works" aria-labelledby="how-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">The Audit Process</span>
+      <h2 id="how-heading">Non-Intrusive. No Software. Results in 24 Hours.</h2>
+      <p>We work entirely from publicly available sources — the same ones attackers use. You don't need to install anything or grant access to your systems.</p>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-card__num">1</div>
+        <h3>Submit Your Request</h3>
+        <p>Provide your company name, domain, and up to 3 employees (first name, last name, city and state). That's all we need — no passwords, no system access.</p>
+        <p class="step-card__time">Takes under 3 minutes</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-card__num">2</div>
+        <h3>We Run the Audit</h3>
+        <p>Our team searches data broker sites, breach databases, people-search aggregators, social networks, public records, and paste sites — for your domain and each employee.</p>
+        <p class="step-card__time">Completed within 24 hours</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-card__num">3</div>
+        <h3>Receive Your Report</h3>
+        <p>A single audit package delivered to your email — covering your company domain and each employee audited. Risk-scored, source-documented, and ready for action.</p>
+        <p class="step-card__time">Delivered securely to your inbox</p>
+      </div>
+    </div>
+
+    <div class="steps-cta">
+      <a href="contact.html" class="btn btn-primary btn-lg">Request a Free Exposure Audit</a>
+      <p>Business domain + up to 3 employees. Delivered within 24 hours. No commitment.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Protection Cycle ── -->
+<section class="section" id="protection-cycle" aria-labelledby="cycle-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">The Full Service</span>
+      <h2 id="cycle-heading">The Audit Opens the Door. We Manage What Comes Next.</h2>
+      <p>The audit tells you exactly what's exposed. Our Exposure Cleanup and Ongoing Exposure Protection services actively manage that risk — reducing your firm's exposure profile and maintaining that reduction over time.</p>
+    </div>
+
+    <div class="lifecycle-grid">
+      <div class="lifecycle-phase">
+        <div class="lifecycle-phase__num">01</div>
+        <div class="lifecycle-phase__content">
+          <h3>Exposure Audit</h3>
+          <p>We map every piece of exposed employee data across the open web — addresses, personal emails, breached credentials, family connections, and behavioral patterns from public sources.</p>
+          <div class="lifecycle-phase__detail">Delivered within 24 hours</div>
+        </div>
+      </div>
+
+      <div class="lifecycle-connector" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+
+      <div class="lifecycle-phase">
+        <div class="lifecycle-phase__num">02</div>
+        <div class="lifecycle-phase__content">
+          <h3>Findings Report</h3>
+          <p>A detailed PDF, risk-scored per employee, with every source documented and severity clearly ranked. Written for business owners and compliance officers — not security engineers.</p>
+          <div class="lifecycle-phase__detail">Confidential PDF, per employee</div>
+        </div>
+      </div>
+
+      <div class="lifecycle-connector" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+
+      <div class="lifecycle-phase">
+        <div class="lifecycle-phase__num">03</div>
+        <div class="lifecycle-phase__content">
+          <h3>Exposure Cleanup</h3>
+          <p>We manage the cleanup of identified exposures across major data broker and people-search networks — tracking every reduction, verifying results, and re-checking at 30 days to confirm your information stays down.</p>
+          <div class="lifecycle-phase__detail">Exposure cleanup and verification</div>
+        </div>
+      </div>
+
+      <div class="lifecycle-connector" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+
+      <div class="lifecycle-phase lifecycle-phase--featured">
+        <div class="lifecycle-phase__badge">Primary Service</div>
+        <div class="lifecycle-phase__num">04</div>
+        <div class="lifecycle-phase__content">
+          <h3>Ongoing Exposure Protection</h3>
+          <p>We continuously monitor across major data broker networks, people-search sites, breach databases, and public records sources — managing new exposures as they surface, conducting quarterly reviews, and maintaining your protection profile as a dedicated ongoing partner. When new exposure is detected, we address it.</p>
+          <div class="lifecycle-phase__detail">Continuous monitoring + active remediation</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lifecycle-note">
+      <p>The free audit gives you the complete picture. Exposure Cleanup and Ongoing Exposure Protection are where we actively manage and reduce your firm's risk.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Sample Findings ── -->
+<section class="section section--alt" id="sample" aria-labelledby="sample-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Sample Report</span>
+      <h2 id="sample-heading">This Is What We Find — And Document</h2>
+      <p>The following is a representative excerpt with all identifying information redacted. Your report provides this level of detail for every employee audited.</p>
+    </div>
+
+    <div class="sample-wrapper">
+      <div class="sample-report">
+        <div class="sample-report__header">
+          <div class="sample-report__title">Employee Exposure Report — Confidential</div>
+          <div class="sample-report__badge">Sample — Redacted</div>
+        </div>
+
+        <div class="sample-report__body">
+          <div class="sample-employee">
+            <div class="sample-employee__avatar">👤</div>
+            <div class="sample-employee__info">
+              <h4>[Employee Name Redacted]</h4>
+              <p>Senior Agent · [Firm Name Redacted] · 7 years tenure</p>
+            </div>
+            <div class="sample-employee__risk">
+              <div class="risk-score">82</div>
+              <div class="risk-label">Exposure Score / 100</div>
+            </div>
+          </div>
+
+          <div class="findings-list">
+            <div class="finding-item finding-item--high">
+              <div class="finding-item__dot"></div>
+              <div class="finding-item__body">
+                <div class="finding-item__type">Home Address</div>
+                <div class="finding-item__value">██████ Oak Lane, [City] [State] █████</div>
+                <div class="finding-item__source">Source: Whitepages, Spokeo, County Assessor Records (+2)</div>
+              </div>
+              <span class="finding-item__sev sev-high">High</span>
+            </div>
+
+            <div class="finding-item finding-item--high">
+              <div class="finding-item__dot"></div>
+              <div class="finding-item__body">
+                <div class="finding-item__type">Personal Email + Password Hash</div>
+                <div class="finding-item__value">███████@gmail.com · Hash: $2b$12$████████</div>
+                <div class="finding-item__source">Source: LinkedIn 2021 Breach, Adobe 2013 Breach</div>
+              </div>
+              <span class="finding-item__sev sev-high">Critical</span>
+            </div>
+
+            <div class="finding-item finding-item--high">
+              <div class="finding-item__dot"></div>
+              <div class="finding-item__body">
+                <div class="finding-item__type">Mobile Phone Number</div>
+                <div class="finding-item__value">(███) ███-████ · Carrier: [Major Carrier]</div>
+                <div class="finding-item__source">Source: Facebook profile, Realtor.com listing, Trulia</div>
+              </div>
+              <span class="finding-item__sev sev-high">High</span>
+            </div>
+
+            <div class="finding-item finding-item--medium">
+              <div class="finding-item__dot"></div>
+              <div class="finding-item__body">
+                <div class="finding-item__type">Family Members Identified</div>
+                <div class="finding-item__value">Spouse: [Redacted] · Children: 2 · School district: [Redacted]</div>
+                <div class="finding-item__source">Source: Facebook (public), Instagram (public), Ancestry.com</div>
+              </div>
+              <span class="finding-item__sev sev-medium">Medium</span>
+            </div>
+
+            <div class="finding-item finding-item--medium">
+              <div class="finding-item__dot"></div>
+              <div class="finding-item__body">
+                <div class="finding-item__type">Location Patterns</div>
+                <div class="finding-item__value">Regular check-ins: [Gym], [Coffee Shop] · Commute route inferable</div>
+                <div class="finding-item__source">Source: Strava (public), Yelp reviews, Instagram geotags</div>
+              </div>
+              <span class="finding-item__sev sev-medium">Medium</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sample-report__footer">
+          <span class="sample-report__disclaimer">All data found via publicly available sources only. No hacking. No unauthorized access.</span>
+          <a href="contact.html" class="btn btn-outline-navy" style="padding:10px 20px;font-size:.85rem;">Request a Free Exposure Audit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── What We Find ── -->
+<section class="section" id="what-we-find" aria-labelledby="find-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">What the Audit Covers</span>
+      <h2 id="find-heading">Every Audit Examines Two Threat Surfaces</h2>
+      <p>Attackers target both your business identity and the people behind it. We examine both — because a breach of either can be used against your clients.</p>
+    </div>
+
+    <div class="audit-subsections">
+
+      <!-- Business Audit -->
+      <div class="audit-subsection">
+        <div class="audit-subsection__header">
+          <div class="audit-subsection__icon audit-subsection__icon--biz">🏢</div>
+          <div class="audit-subsection__meta">
+            <h3>Business Audit</h3>
+            <p>Your company domain and business identity, examined across public and breach sources</p>
+          </div>
+        </div>
+        <div class="find-grid find-grid--3">
+          <div class="find-card">
+            <div class="find-card__icon">🔓</div>
+            <h3>Domain Breach Exposure</h3>
+            <p>Email addresses and credentials associated with your company domain that have appeared in known data breaches — across dozens of breach databases.</p>
+            <div class="find-card__examples">
+              <span class="tag">HaveIBeenPwned</span>
+              <span class="tag">Breach Dumps</span>
+              <span class="tag">Paste Sites</span>
+            </div>
+          </div>
+
+          <div class="find-card">
+            <div class="find-card__icon">🌐</div>
+            <h3>Public Domain Exposure</h3>
+            <p>Business registration records, WHOIS data, reverse lookups, and public corporate information aggregated across data broker and business intelligence sites.</p>
+            <div class="find-card__examples">
+              <span class="tag">WHOIS</span>
+              <span class="tag">Business Registries</span>
+              <span class="tag">Corp Records</span>
+            </div>
+          </div>
+
+          <div class="find-card">
+            <div class="find-card__icon">📋</div>
+            <h3>Public Exposure Findings</h3>
+            <p>References to your domain across paste sites, public forums, breach indexes, and data aggregation sources where company information is shared or sold.</p>
+            <div class="find-card__examples">
+              <span class="tag">Pastebin</span>
+              <span class="tag">Public Indexes</span>
+              <span class="tag">Leak Forums</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Employee Audit -->
+      <div class="audit-subsection">
+        <div class="audit-subsection__header">
+          <div class="audit-subsection__icon audit-subsection__icon--emp">👤</div>
+          <div class="audit-subsection__meta">
+            <h3>Employee Audit</h3>
+            <p>Up to 3 employees — the personal data that makes your people vulnerable to targeted attacks</p>
+          </div>
+        </div>
+        <div class="find-grid find-grid--3">
+          <div class="find-card">
+            <div class="find-card__icon">🏠</div>
+            <h3>Public Records Exposure</h3>
+            <p>Home addresses, historical addresses, property ownership, and voter registration records from county databases and public records aggregators.</p>
+            <div class="find-card__examples">
+              <span class="tag">County Assessor</span>
+              <span class="tag">Voter Records</span>
+              <span class="tag">Property Records</span>
+            </div>
+          </div>
+
+          <div class="find-card">
+            <div class="find-card__icon">🔍</div>
+            <h3>People-Search Exposure</h3>
+            <p>Profiles on Whitepages, Spokeo, Intelius, BeenVerified, and similar sites that consolidate personal data from hundreds of public sources and resell access.</p>
+            <div class="find-card__examples">
+              <span class="tag">Whitepages</span>
+              <span class="tag">Spokeo</span>
+              <span class="tag">Intelius</span>
+              <span class="tag">BeenVerified</span>
+            </div>
+          </div>
+
+          <div class="find-card">
+            <div class="find-card__icon">📞</div>
+            <h3>Phone &amp; Address Exposure</h3>
+            <p>Personal mobile numbers, landlines, and current and historical addresses linked through social profiles, real estate listings, and data broker compilations.</p>
+            <div class="find-card__examples">
+              <span class="tag">Social Profiles</span>
+              <span class="tag">Realtor Listings</span>
+              <span class="tag">Aggregators</span>
+            </div>
+          </div>
+
+          <div class="find-card">
+            <div class="find-card__icon">👨‍👩‍👧</div>
+            <h3>Relative &amp; Associate Exposure</h3>
+            <p>Family members, known associates, and relationship networks derived from public social media, property records, and data aggregator profiles — used to build pressure or establish false trust.</p>
+            <div class="find-card__examples">
+              <span class="tag">Facebook</span>
+              <span class="tag">Ancestry</span>
+              <span class="tag">Public Records</span>
+            </div>
+          </div>
+
+          <div class="find-card">
+            <div class="find-card__icon">🗂️</div>
+            <h3>Public Information Findings</h3>
+            <p>Behavioral patterns, social check-ins, professional profile content, and any other public-facing personal information discoverable through open-source research methods.</p>
+            <div class="find-card__examples">
+              <span class="tag">LinkedIn</span>
+              <span class="tag">Instagram</span>
+              <span class="tag">Strava</span>
+              <span class="tag">Eventbrite</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /audit-subsections -->
+  </div>
+</section>
+
+<!-- ── Why It Matters ── -->
+<section class="section section--alt" id="why-it-matters" aria-labelledby="matters-heading">
+  <div class="container">
+    <div class="matters-grid">
+      <div class="matters__points">
+        <span class="eyebrow">Why It Matters</span>
+        <h2 id="matters-heading">Exposed Data Is the Starting Point for Every Targeted Attack</h2>
+
+        <div class="matter-point">
+          <div class="matter-point__icon">🎯</div>
+          <div>
+            <h3>Spear Phishing &amp; Business Email Compromise</h3>
+            <p>Attackers armed with personal details craft emails that look legitimate to clients, triggering wire fraud or credential theft. BEC losses exceeded $2.9 billion in 2023.</p>
+          </div>
+        </div>
+
+        <div class="matter-point">
+          <div class="matter-point__icon">🎭</div>
+          <div>
+            <h3>Impersonation &amp; Client Fraud</h3>
+            <p>Criminals use employee photos, personal emails, and bios to pose as your agents — contacting clients to redirect funds or steal account information.</p>
+          </div>
+        </div>
+
+        <div class="matter-point">
+          <div class="matter-point__icon">📞</div>
+          <div>
+            <h3>Voice Phishing &amp; Pretexting</h3>
+            <p>With a phone number and personal background, an attacker can convince your staff or clients they're speaking to a known, trusted party.</p>
+          </div>
+        </div>
+
+        <div class="matter-point">
+          <div class="matter-point__icon">⚖️</div>
+          <div>
+            <h3>Regulatory &amp; Liability Exposure</h3>
+            <p>Regulated firms face scrutiny when client data is compromised via preventable social engineering. Proactive documentation demonstrates due diligence.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="matters__visual">
+        <h3 style="margin-bottom:20px;font-size:.8rem;color:var(--text-light);font-family:'Inter',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.08em;">How a Targeted Attack Unfolds</h3>
+        <div class="attack-scenario">
+          <div class="attack-step">
+            <div class="attack-step__num">1</div>
+            <div class="attack-step__content">
+              <h4>Reconnaissance</h4>
+              <p>Attacker finds home address, personal email, and family details through public sources in under 30 minutes.</p>
+            </div>
+          </div>
+          <div class="attack-step">
+            <div class="attack-step__num">2</div>
+            <div class="attack-step__content">
+              <h4>Pretext Construction</h4>
+              <p>A convincing email is crafted using the agent's real name, title, and phone — sent from a spoofed or lookalike domain.</p>
+            </div>
+          </div>
+          <div class="attack-step">
+            <div class="attack-step__num">3</div>
+            <div class="attack-step__content">
+              <h4>Client Contact</h4>
+              <p>The attacker emails or calls clients posing as the agent, requesting an urgent wire transfer or document.</p>
+            </div>
+          </div>
+          <div class="attack-step">
+            <div class="attack-step__num">4</div>
+            <div class="attack-step__content">
+              <h4>Compromise</h4>
+              <p>Funds are transferred or credentials stolen before anyone realizes the communication was fraudulent.</p>
+            </div>
+          </div>
+          <div class="attack-step">
+            <div class="attack-step__num">5</div>
+            <div class="attack-step__content">
+              <h4>Aftermath</h4>
+              <p>Reputational damage, regulatory filings, and legal liability — all stemming from publicly available personal data.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── After the Audit ── -->
+<section class="section" id="pricing" aria-labelledby="pricing-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">After the Audit</span>
+      <h2 id="pricing-heading">We Identify the Exposure. We Recommend the Protection.</h2>
+      <p>Every engagement begins with a free audit. Once we understand your firm's actual exposure profile, we review the findings with you and recommend the appropriate protection plan — not the other way around.</p>
+    </div>
+
+    <!-- Free audit callout -->
+    <div class="pricing-free-callout">
+      <div class="pricing-free-callout__inner">
+        <div class="pricing-free-callout__left">
+          <div class="pricing-free-callout__label">Step 1 — Free</div>
+          <h3>Free Exposure Audit</h3>
+          <p>Business domain review + up to 3 employees. Delivered within 24 hours. No credit card. No commitment.</p>
+          <ul class="pricing-free-list">
+            <li>Company domain exposure &amp; breach findings</li>
+            <li>Public records exposure per employee</li>
+            <li>People-search network exposure per employee</li>
+            <li>Phone &amp; address exposure per employee</li>
+            <li>Relative &amp; associate exposure per employee</li>
+            <li>Full findings report delivered to your email</li>
+          </ul>
+        </div>
+        <div class="pricing-free-callout__right">
+          <a href="contact.html" class="btn btn-primary btn-lg">Request a Free Exposure Audit</a>
+          <p>Takes under 3 minutes to submit</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pricing-divider-label">
+      <span>Step 2 — Your custom protection plan may include</span>
+    </div>
+
+    <div class="plan-components">
+
+      <div class="plan-component">
+        <div class="plan-component__label">Business Exposure Protection</div>
+        <ul class="plan-component__list">
+          <li>Company domain monitoring</li>
+          <li>Breach monitoring</li>
+          <li>Business information protection</li>
+          <li>Exposure monitoring</li>
+        </ul>
+      </div>
+
+      <div class="plan-component">
+        <div class="plan-component__label">Employee Exposure Protection</div>
+        <ul class="plan-component__list">
+          <li>Employee exposure cleanup</li>
+          <li>Exposure reduction</li>
+          <li>Ongoing monitoring</li>
+          <li>Exposure management</li>
+        </ul>
+      </div>
+
+      <div class="plan-component">
+        <div class="plan-component__label">Executive Protection</div>
+        <ul class="plan-component__list">
+          <li>Executive exposure monitoring</li>
+          <li>Public-facing employee protection</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="plan-note">
+      <p>Your protection plan may include one, two, or all three components — determined by what your audit reveals. We review the findings with you and recommend the appropriate scope. There's no preset package to choose from before we understand your exposure.</p>
+      <a href="contact.html" class="btn btn-primary btn-lg">Request a Free Exposure Audit</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Industries ── -->
+<section class="section section--alt" id="industries" aria-labelledby="industry-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Who We Serve</span>
+      <h2 id="industry-heading">Built for High-Trust Professional Firms</h2>
+      <p>If your business handles client money, sensitive data, or high-value transactions, your employees are a target. We specialize in these sectors.</p>
+    </div>
+
+    <div class="industries-grid">
+      <div class="industry-card">
+        <div class="industry-card__icon">🏡</div>
+        <div>
+          <h3>Real Estate Agencies</h3>
+          <p>Agents whose personal contact info is publicly tied to listings are prime impersonation targets.</p>
+        </div>
+      </div>
+
+      <div class="industry-card">
+        <div class="industry-card__icon">🏦</div>
+        <div>
+          <h3>Mortgage Brokers</h3>
+          <p>Loan officers who handle sensitive financial data are high-value targets for social engineering.</p>
+        </div>
+      </div>
+
+      <div class="industry-card">
+        <div class="industry-card__icon">🛡️</div>
+        <div>
+          <h3>Insurance Agencies</h3>
+          <p>Client-facing agents whose professional relationships make them credible impersonation targets.</p>
+        </div>
+      </div>
+
+      <div class="industry-card">
+        <div class="industry-card__icon">📈</div>
+        <div>
+          <h3>Financial Advisors</h3>
+          <p>Advisors managing high-net-worth client portfolios attract sophisticated, research-driven attacks.</p>
+        </div>
+      </div>
+
+      <div class="industry-card">
+        <div class="industry-card__icon">⚖️</div>
+        <div>
+          <h3>Law Firms</h3>
+          <p>Attorneys handling escrow, client funds, and confidential matters are frequent pretexting targets.</p>
+        </div>
+      </div>
+
+      <div class="industry-card">
+        <div class="industry-card__icon">🏢</div>
+        <div>
+          <h3>Small Business Owners</h3>
+          <p>Owner-operated businesses where personal trust and reputation are the foundation of client relationships.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="section" id="faq" aria-labelledby="faq-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Common Questions</span>
+      <h2 id="faq-heading">What Firms Ask Before They Start</h2>
+      <p>Straightforward answers to the questions we hear most from business owners considering an audit.</p>
+    </div>
+
+    <div class="faq-list" role="list">
+
+      <details class="faq-item">
+        <summary class="faq-question">Is this legal?</summary>
+        <div class="faq-answer">
+          <p>Yes. All research is conducted using publicly available, open-source information — the same data anyone can access freely online. We do not hack, use unauthorized access, or violate any platform's terms of service. Every finding in your report can be independently verified through the sources we document.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Who sees my employees' names and email addresses?</summary>
+        <div class="faq-answer">
+          <p>Only our audit team, under strict confidentiality. We never sell, share, or use employee data for any purpose other than conducting your audit. All submitted employee data is deleted from our systems within 30 days of report delivery. This is documented in our <a href="privacy.html">Privacy Policy</a>.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Do my employees need to know about the audit?</summary>
+        <div class="faq-answer">
+          <p>Not during the audit itself — we're researching publicly available information, not accessing private systems or accounts. After receiving the report, many firms brief their employees, share the relevant findings, and walk through the remediation steps together. We can advise on how to handle that conversation effectively.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">What happens after we receive the report?</summary>
+        <div class="faq-answer">
+          <p>The report includes a prioritized findings summary so you know exactly what was found and how severe each exposure is. We then review the findings with you and recommend a protection plan appropriate to your firm's actual exposure profile — which may include business exposure protection, employee exposure protection, executive protection, or a combination.</p>
+          <p>The plan is based on what we find, not a preset package you select in advance. Some firms need immediate exposure cleanup; others benefit more from ongoing monitoring and management. We make that recommendation after seeing your results.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">How is this different from a cybersecurity audit or penetration test?</summary>
+        <div class="faq-answer">
+          <p>A penetration test looks for vulnerabilities in your systems and technical infrastructure. We focus specifically on the open-source intelligence (OSINT) layer — the personal data about your employees that exists on the public web. This is the reconnaissance phase that precedes nearly every targeted social engineering attack. Most cybersecurity audits do not examine it at all. Our work addresses a different and often overlooked threat surface.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Can we research this ourselves instead of hiring you?</summary>
+        <div class="faq-answer">
+          <p>You can search some of this information manually — but a thorough audit covers dozens of data broker sites, multiple breach databases, people-search aggregators, public records sources, and social platforms for each employee. Systematically checking all of them, knowing what to look for in each, and then repeating the process regularly for an entire team is a significant time commitment that most firms don't have the bandwidth to maintain. We do this consistently and know what to look for because it's the only thing we do.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Is there any obligation after the audit?</summary>
+        <div class="faq-answer">
+          <p>None. The report and findings are yours to keep regardless of what you decide to do next. If you'd like us to manage the exposure on your behalf, we'll recommend a plan based on the results. If you'd prefer to handle it internally, the report gives you everything you need to do so. There is no pressure and no commitment beyond the audit itself.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">How does the free audit work?</summary>
+        <div class="faq-answer">
+          <p>Submit the short form on our <a href="contact.html">Contact page</a> with your company name, domain, email address, and up to 3 employees (first name, last name, city and state). We run a full audit — business domain review and employee exposure audit — and deliver a complete findings package to your email within 24 hours. No credit card, no sales call, no commitment.</p>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Final CTA ── -->
+<section class="cta-section" aria-labelledby="cta-heading">
+  <div class="container" style="position:relative;z-index:1;">
+    <span class="eyebrow" style="color:var(--gold-light);">Free Sample Audit</span>
+    <h2 id="cta-heading">See What Your Firm Looks Like to an Attacker.</h2>
+    <p>We audit your company domain and up to 3 employees at no cost. A complete findings report delivered to your inbox — so you can see exactly what's at risk before you decide anything.</p>
+    <a href="contact.html" class="btn btn-primary btn-lg">Request a Free Exposure Audit</a>
+    <p class="cta-guarantee">No software. No commitment. Delivered within 24 hours.</p>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer class="footer" role="contentinfo">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <div class="footer__logo">
+        <div class="nav__logo-mark">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
+            <path d="M12 2L20 6V13C20 17.4 16.5 21.5 12 23C7.5 21.5 4 17.4 4 13V6L12 2Z" fill="#C8A84B"/>
+          </svg>
+        </div>
+        FraudGuardians
+      </div>
+      <p>Employee exposure audits and ongoing protection for professional firms. We find what criminals find — and help you eliminate it.</p>
+    </div>
+
+    <div class="footer__col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#protection-cycle">The Protection Cycle</a></li>
+        <li><a href="#pricing">After the Audit</a></li>
+        <li><a href="contact.html">Request a Free Exposure Audit</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="#industries">Industries We Serve</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <p>© 2025 FraudGuardians. All rights reserved.</p>
+    <div class="footer__legal">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

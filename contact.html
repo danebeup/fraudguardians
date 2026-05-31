@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request a Free Exposure Audit — FraudGuardians</title>
+  <meta name="description" content="Request your free exposure audit. We review your company domain and up to 3 employees and deliver a complete findings report within 24 hours." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231B3461'/><path d='M16 6 L23 10 L23 18 C23 22 16 26 16 26 C16 26 9 22 9 18 L9 10 Z' fill='%23C8A84B'/></svg>" />
+  <style>
+    .contact-hero {
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-mid) 100%);
+      padding: 140px 24px 64px;
+      text-align: center;
+    }
+    .contact-hero .eyebrow { color: var(--gold-light); }
+    .contact-hero h1 { color: var(--white); }
+    .contact-hero p { color: rgba(255,255,255,.65); font-size: 1.05rem; max-width: 520px; margin: 14px auto 0; }
+    .contact-section { padding: 80px 24px 96px; }
+  </style>
+</head>
+<body>
+
+<nav class="nav" role="navigation">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <div class="nav__logo-mark">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L20 6V13C20 17.4 16.5 21.5 12 23C7.5 21.5 4 17.4 4 13V6L12 2Z"/>
+        </svg>
+      </div>
+      FraudGuardians
+    </a>
+    <div class="nav__links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="index.html#how-it-works">How It Works</a>
+      <a href="index.html#pricing">Our Approach</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+    <div class="nav__cta">
+      <a href="contact.html" class="btn btn-primary">Request a Free Exposure Audit</a>
+    </div>
+    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="contact-hero">
+  <span class="eyebrow">Free Exposure Audit</span>
+  <h1>See What Your Firm Looks Like to an Attacker</h1>
+  <p>We audit your company domain and up to 3 employees and deliver a complete findings report — at no cost, with no commitment.</p>
+</div>
+
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Left: what's included -->
+      <div class="contact-info">
+        <h2>What Your Free Audit Includes</h2>
+        <p>Every audit covers two areas: your business and your people. Here's exactly what we examine.</p>
+
+        <div class="audit-scope">
+          <div class="audit-scope__block">
+            <div class="audit-scope__label">
+              <span class="audit-scope__icon">🏢</span>
+              Business Audit
+            </div>
+            <ul class="audit-scope__list">
+              <li>Company domain exposure review</li>
+              <li>Public exposure findings</li>
+              <li>Breach exposure findings</li>
+            </ul>
+          </div>
+
+          <div class="audit-scope__block">
+            <div class="audit-scope__label">
+              <span class="audit-scope__icon">👤</span>
+              Employee Audit — up to 3 people
+            </div>
+            <ul class="audit-scope__list">
+              <li>Public records exposure</li>
+              <li>People-search site exposure</li>
+              <li>Phone &amp; address exposure</li>
+              <li>Relative &amp; associate exposure</li>
+              <li>Public information findings</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="audit-delivery-info">
+          <div class="delivery-item">
+            <span class="delivery-icon">⏱️</span>
+            <div>
+              <strong>Delivered within 24 hours</strong>
+              <p>Complete audit package sent to the email you provide.</p>
+            </div>
+          </div>
+          <div class="delivery-item">
+            <span class="delivery-icon">🔒</span>
+            <div>
+              <strong>Data deleted within 30 days</strong>
+              <p>We never retain submitted information beyond the engagement.</p>
+            </div>
+          </div>
+          <div class="delivery-item">
+            <span class="delivery-icon">⚖️</span>
+            <div>
+              <strong>Open-source research only</strong>
+              <p>No hacking. No unauthorized access. Every finding is verifiable.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-email-direct">
+          <p>Questions first? Email us at <a href="mailto:hello@fraudguardians.com">hello@fraudguardians.com</a></p>
+        </div>
+      </div>
+
+      <!-- Right: form -->
+      <div class="contact-form-card">
+        <h3>Request a Free Exposure Audit</h3>
+        <p>No credit card. No commitment. Delivered within 24 hours.</p>
+
+        <form id="contactForm" novalidate>
+
+          <!-- Section: Company Information -->
+          <div class="form-section">
+            <div class="form-section__header">
+              <span class="form-section__title">Company Information</span>
+            </div>
+
+            <div class="form-group">
+              <label for="companyName">Company Name <span class="req">*</span></label>
+              <input type="text" id="companyName" name="companyName" autocomplete="organization" required placeholder="Smith &amp; Associates Realty" />
+            </div>
+
+            <div class="form-group">
+              <label for="companyDomain">Company Domain <span class="req">*</span></label>
+              <input type="text" id="companyDomain" name="companyDomain" required placeholder="yourfirm.com" autocomplete="off" inputmode="url" />
+              <p class="field-hint">Enter your domain without "www" — e.g. smithrealty.com</p>
+            </div>
+
+            <div class="form-group">
+              <label for="teamSize">Approximate Team Size</label>
+              <select id="teamSize" name="teamSize">
+                <option value="" disabled selected>Select team size</option>
+                <option value="1-10">1–10 employees</option>
+                <option value="11-25">11–25 employees</option>
+                <option value="26-50">26–50 employees</option>
+                <option value="51-100">51–100 employees</option>
+                <option value="100+">100+ employees</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Section: Audit Delivery -->
+          <div class="form-section form-section--delivery">
+            <div class="form-section__header">
+              <span class="form-section__title">Where should we send your audit?</span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address <span class="req">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" required placeholder="you@yourfirm.com" />
+              <p class="field-hint">We'll send your free exposure audit to this address within 24 hours.</p>
+            </div>
+          </div>
+
+          <!-- Section: Employee Audit -->
+          <div class="form-section">
+            <div class="form-section__header">
+              <span class="form-section__title">Employee Exposure Audit</span>
+              <span class="form-section__note">Up to 3 employees included</span>
+            </div>
+            <p class="form-section__desc">First name, last name, and city/state is all we need to accurately identify each person and generate their exposure profile.</p>
+
+            <!-- Employee 1 — required -->
+            <div class="employee-slot" id="employee-1">
+              <div class="employee-slot__label">Employee 1</div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="emp1_first">First Name <span class="req">*</span></label>
+                  <input type="text" id="emp1_first" name="emp1_first" required placeholder="Jane" autocomplete="off" />
+                </div>
+                <div class="form-group">
+                  <label for="emp1_last">Last Name <span class="req">*</span></label>
+                  <input type="text" id="emp1_last" name="emp1_last" required placeholder="Smith" autocomplete="off" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="emp1_location">City, State <span class="req">*</span></label>
+                <input type="text" id="emp1_location" name="emp1_location" required placeholder="Austin, TX" autocomplete="off" />
+              </div>
+            </div>
+
+            <!-- Add Employee 2 trigger -->
+            <div id="add-emp2-trigger" class="add-employee-trigger">
+              <button type="button" class="btn-add-employee" data-add-employee="2">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                Add a second employee <span class="add-optional">(optional)</span>
+              </button>
+            </div>
+
+            <!-- Employee 2 — optional, hidden -->
+            <div class="employee-slot employee-slot--optional" id="employee-2" style="display:none;" aria-hidden="true">
+              <div class="employee-slot__label">
+                Employee 2
+                <span class="employee-slot__optional">Optional</span>
+                <button type="button" class="employee-slot__remove" data-remove-employee="2" aria-label="Remove employee 2">Remove</button>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="emp2_first">First Name</label>
+                  <input type="text" id="emp2_first" name="emp2_first" placeholder="John" autocomplete="off" />
+                </div>
+                <div class="form-group">
+                  <label for="emp2_last">Last Name</label>
+                  <input type="text" id="emp2_last" name="emp2_last" placeholder="Doe" autocomplete="off" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="emp2_location">City, State</label>
+                <input type="text" id="emp2_location" name="emp2_location" placeholder="Dallas, TX" autocomplete="off" />
+              </div>
+            </div>
+
+            <!-- Add Employee 3 trigger — hidden until emp 2 is added -->
+            <div id="add-emp3-trigger" class="add-employee-trigger" style="display:none;" aria-hidden="true">
+              <button type="button" class="btn-add-employee" data-add-employee="3">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                Add a third employee <span class="add-optional">(optional)</span>
+              </button>
+            </div>
+
+            <!-- Employee 3 — optional, hidden -->
+            <div class="employee-slot employee-slot--optional" id="employee-3" style="display:none;" aria-hidden="true">
+              <div class="employee-slot__label">
+                Employee 3
+                <span class="employee-slot__optional">Optional</span>
+                <button type="button" class="employee-slot__remove" data-remove-employee="3" aria-label="Remove employee 3">Remove</button>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="emp3_first">First Name</label>
+                  <input type="text" id="emp3_first" name="emp3_first" placeholder="Alex" autocomplete="off" />
+                </div>
+                <div class="form-group">
+                  <label for="emp3_last">Last Name</label>
+                  <input type="text" id="emp3_last" name="emp3_last" placeholder="Johnson" autocomplete="off" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="emp3_location">City, State</label>
+                <input type="text" id="emp3_location" name="emp3_location" placeholder="Houston, TX" autocomplete="off" />
+              </div>
+            </div>
+
+          </div><!-- /employee section -->
+
+          <div class="form-submit">
+            <button type="submit" class="btn btn-primary btn-lg">Request a Free Exposure Audit</button>
+          </div>
+
+          <p class="form-trust-copy">
+            We use this information solely to generate your exposure audit. We do not contact employees directly, sell submitted information, or share audit findings with third parties.
+          </p>
+
+          <p class="form-consent">
+            By submitting you agree to our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a>.
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <div class="footer__logo">
+        <div class="nav__logo-mark">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
+            <path d="M12 2L20 6V13C20 17.4 16.5 21.5 12 23C7.5 21.5 4 17.4 4 13V6L12 2Z" fill="#C8A84B"/>
+          </svg>
+        </div>
+        FraudGuardians
+      </div>
+      <p>Employee exposure audits and ongoing protection for professional firms. We find what criminals find — and help you eliminate it.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="index.html#how-it-works">How It Works</a></li>
+        <li><a href="index.html#protection-cycle">The Protection Cycle</a></li>
+        <li><a href="index.html#pricing">After the Audit</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>© 2025 FraudGuardians. All rights reserved.</p>
+    <div class="footer__legal">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
