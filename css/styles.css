@@ -1777,6 +1777,45 @@ select { cursor: pointer; }
 .contact-email-direct a { color: var(--navy); font-weight: 500; }
 .contact-email-direct a:hover { color: var(--gold); }
 
+/* ── SMS Consent Block ── */
+.sms-consent-block {
+  margin-bottom: 20px;
+  padding: 16px;
+  background: var(--gray-100);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+}
+
+.sms-consent__label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+  font-size: .82rem;
+  font-weight: 400;
+  color: var(--text-mid);
+  line-height: 1.55;
+  margin-bottom: 0;
+}
+
+.sms-consent__label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  margin-top: 2px;
+  accent-color: var(--navy);
+  cursor: pointer;
+  padding: 0;
+  border: 1px solid var(--gray-400);
+  border-radius: 3px;
+}
+
+.sms-consent__text a {
+  color: var(--navy);
+  text-decoration: underline;
+}
+.sms-consent__text a:hover { color: var(--gold); }
+
 /* ── Responsive ── */
 @media (max-width: 1024px) {
   .hero__inner { gap: 40px; }
