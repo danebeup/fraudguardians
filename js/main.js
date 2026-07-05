@@ -183,9 +183,13 @@ if (contactForm) {
 
     try {
       const formData = new FormData(contactForm);
-      const smsCheckbox = contactForm.querySelector('#smsConsent');
-      if (smsCheckbox) {
-        formData.set('sms_consent', smsCheckbox.checked ? 'true' : 'false');
+      const smsServiceCheckbox = contactForm.querySelector('#smsConsentService');
+      if (smsServiceCheckbox) {
+        formData.set('sms_consent_service', smsServiceCheckbox.checked ? 'true' : 'false');
+      }
+      const smsMarketingCheckbox = contactForm.querySelector('#smsConsentMarketing');
+      if (smsMarketingCheckbox) {
+        formData.set('sms_consent_marketing', smsMarketingCheckbox.checked ? 'true' : 'false');
       }
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',

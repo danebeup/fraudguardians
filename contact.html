@@ -276,11 +276,18 @@
 
           </div><!-- /employee section -->
 
-          <div class="sms-consent-block">
+          <div class="sms-consent-block" id="sms-consent">
             <label class="sms-consent__label">
-              <input type="checkbox" id="smsConsent" />
-              <span class="sms-consent__text">I agree to receive SMS messages from FraudGuardians regarding my exposure assessment, appointment scheduling, service updates, cybersecurity tips, and occasional marketing messages. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out and HELP for help. See our <a href="privacy.html">Privacy Policy</a> and <a href="sms-terms.html">SMS Terms</a>.</span>
+              <input type="checkbox" id="smsConsentService" name="smsConsentService" />
+              <span class="sms-consent__text">I agree to receive SMS messages from FraudGuardians regarding my exposure assessment request, appointment scheduling, audit updates, and service notifications. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out. Reply HELP for help.</span>
             </label>
+
+            <label class="sms-consent__label">
+              <input type="checkbox" id="smsConsentMarketing" name="smsConsentMarketing" />
+              <span class="sms-consent__text">I agree to receive promotional SMS messages from FraudGuardians, including cybersecurity tips, product updates, and promotional offers. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out. Reply HELP for help.</span>
+            </label>
+
+            <p class="sms-consent__links">Neither checkbox is required. See our <a href="privacy.html">Privacy Policy</a> and <a href="sms-terms.html">SMS Terms</a> for details on how SMS data is used.</p>
           </div>
 
           <div class="form-submit">
@@ -292,7 +299,7 @@
           </p>
 
           <p class="form-consent">
-            By submitting you agree to our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a>.
+            By submitting you agree to our <a href="privacy.html">Privacy Policy</a>, <a href="terms.html">Terms of Service</a>, and <a href="sms-terms.html">SMS Terms</a>.
           </p>
         </form>
       </div>

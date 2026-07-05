@@ -1524,6 +1524,31 @@ select { cursor: pointer; }
   margin-bottom: 0;
 }
 
+/* ── Hero SMS opt-in notice ── */
+.hero__sms-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 14px 16px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: var(--radius);
+  max-width: 480px;
+}
+.hero__sms-notice-icon { font-size: 1.05rem; line-height: 1.5; }
+.hero__sms-notice p {
+  font-size: .82rem;
+  color: rgba(255,255,255,.65);
+  line-height: 1.5;
+  margin: 0;
+}
+.hero__sms-notice a { color: var(--gold-light); text-decoration: underline; }
+.hero__sms-notice a:hover { color: var(--white); }
+
+/* ── SMS consent anchor offset (fixed nav) ── */
+#sms-consent { scroll-margin-top: 110px; }
+
 /* ── Stats source citation ── */
 .stat__source {
   font-size: .68rem;
@@ -1815,6 +1840,22 @@ select { cursor: pointer; }
   text-decoration: underline;
 }
 .sms-consent__text a:hover { color: var(--gold); }
+
+.sms-consent__label + .sms-consent__label {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--gray-200);
+}
+
+.sms-consent__links {
+  margin: 14px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--gray-200);
+  font-size: .78rem;
+  color: var(--text-light);
+}
+.sms-consent__links a { color: var(--navy); text-decoration: underline; }
+.sms-consent__links a:hover { color: var(--gold); }
 
 /* ── Responsive ── */
 @media (max-width: 1024px) {
