@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SMS Consent &amp; Opt-In Example — FraudGuardians</title>
+  <meta name="description" content="FraudGuardians SMS Consent & Opt-In Example — a reference page showing our SMS opt-in process, consent language, and messaging terms." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231B3461'/><path d='M16 6 L23 10 L23 18 C23 22 16 26 16 26 C16 26 9 22 9 18 L9 10 Z' fill='%23C8A84B'/></svg>" />
+  <style>
+    .consent-hero {
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-mid) 100%);
+      padding: 140px 24px 64px;
+      text-align: center;
+    }
+    .consent-hero .eyebrow { color: var(--gold-light); }
+    .consent-hero h1 { color: var(--white); }
+    .consent-hero p { color: rgba(255,255,255,.65); font-size: 1.05rem; max-width: 620px; margin: 14px auto 0; }
+    .consent-section { padding: 80px 24px 96px; }
+    .consent-form-wrap { max-width: 640px; margin: 0 auto; }
+    .consent-note {
+      background: rgba(200,168,75,.1);
+      border: 1px solid rgba(200,168,75,.35);
+      border-radius: var(--radius-lg, 10px);
+      padding: 16px 20px;
+      font-size: .85rem;
+      color: var(--text-mid);
+      margin-top: 16px;
+    }
+    .consent-legal-links {
+      margin-top: 28px;
+      text-align: center;
+      font-size: .9rem;
+    }
+    .consent-legal-links a { color: var(--navy); text-decoration: underline; margin: 0 8px; }
+    .consent-legal-links a:hover { color: var(--gold); }
+  </style>
+</head>
+<body>
+
+<nav class="nav" role="navigation">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <div class="nav__logo-mark">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L20 6V13C20 17.4 16.5 21.5 12 23C7.5 21.5 4 17.4 4 13V6L12 2Z"/>
+        </svg>
+      </div>
+      FraudGuardians
+    </a>
+    <div class="nav__links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="index.html#how-it-works">How It Works</a>
+      <a href="index.html#pricing">Our Approach</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav__cta">
+      <a href="contact.html" class="btn btn-primary">Request a Free Exposure Audit</a>
+    </div>
+    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="consent-hero">
+  <span class="eyebrow">SMS Compliance Reference</span>
+  <h1>FraudGuardians SMS Consent &amp; Opt-In Example</h1>
+  <p>This page shows the SMS opt-in process used on the FraudGuardians contact form, including the exact consent language, checkbox behavior, and disclosures presented to users before they opt in to receive text messages from FraudGuardians.</p>
+</div>
+
+<section class="consent-section">
+  <div class="consent-form-wrap">
+    <div class="contact-form-card">
+      <h3>Request a Free Exposure Audit</h3>
+      <p>This is a static example of the FraudGuardians contact form. It is not connected to a live submission endpoint.</p>
+
+      <form id="smsConsentExampleForm" novalidate>
+
+        <div class="form-section">
+          <div class="form-section__header">
+            <span class="form-section__title">Your Information</span>
+          </div>
+
+          <div class="form-group">
+            <label for="exName">Name <span class="req">*</span></label>
+            <input type="text" id="exName" name="exName" autocomplete="name" placeholder="Jane Smith" />
+          </div>
+
+          <div class="form-group">
+            <label for="exCompany">Company <span class="req">*</span></label>
+            <input type="text" id="exCompany" name="exCompany" autocomplete="organization" placeholder="Smith &amp; Associates Realty" />
+          </div>
+
+          <div class="form-group">
+            <label for="exEmail">Business Email <span class="req">*</span></label>
+            <input type="email" id="exEmail" name="exEmail" autocomplete="email" placeholder="you@yourfirm.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="exPhone">Phone Number</label>
+            <input type="tel" id="exPhone" name="exPhone" autocomplete="tel" placeholder="(555) 555-5555" />
+          </div>
+        </div>
+
+        <div class="sms-consent-block" id="sms-consent-example">
+          <label class="sms-consent__label">
+            <input type="checkbox" id="exSmsConsentService" name="exSmsConsentService" />
+            <span class="sms-consent__text">I agree to receive SMS messages from FraudGuardians regarding my exposure assessment request, appointment scheduling, audit updates, and service notifications. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out. Reply HELP for help.</span>
+          </label>
+
+          <label class="sms-consent__label">
+            <input type="checkbox" id="exSmsConsentMarketing" name="exSmsConsentMarketing" />
+            <span class="sms-consent__text">I agree to receive promotional SMS messages from FraudGuardians, including cybersecurity tips, product updates, and promotional offers. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out. Reply HELP for help.</span>
+          </label>
+
+          <p class="sms-consent__links">Neither checkbox is required, and neither is pre-selected. See our <a href="privacy.html">Privacy Policy</a> and <a href="sms-terms.html">SMS Terms</a> for details on how SMS data is used.</p>
+        </div>
+
+        <div class="form-submit">
+          <button type="submit" class="btn btn-primary btn-lg">Request a Free Exposure Audit</button>
+        </div>
+
+        <p class="form-consent">
+          By submitting you agree to our <a href="privacy.html">Privacy Policy</a>, <a href="terms.html">Terms of Service</a>, and <a href="sms-terms.html">SMS Terms</a>.
+        </p>
+      </form>
+
+      <div class="consent-note">
+        <strong>Note for reviewers:</strong> Both SMS consent checkboxes above are unchecked by default and are never required to submit the form. This example mirrors the live opt-in form at <a href="contact.html#sms-consent">fraudguardians.com/contact.html</a>.
+      </div>
+    </div>
+
+    <div class="consent-legal-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="sms-terms.html">SMS Terms</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <div class="footer__logo">
+        <div class="nav__logo-mark">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
+            <path d="M12 2L20 6V13C20 17.4 16.5 21.5 12 23C7.5 21.5 4 17.4 4 13V6L12 2Z" fill="#C8A84B"/>
+          </svg>
+        </div>
+        FraudGuardians
+      </div>
+      <p>Employee exposure audits and ongoing protection for professional firms. We find what criminals find — and help you eliminate it.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="index.html#how-it-works">How It Works</a></li>
+        <li><a href="index.html#protection-cycle">The Protection Cycle</a></li>
+        <li><a href="index.html#pricing">After the Audit</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="sms-terms.html">SMS Terms</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>© 2025 FraudGuardians. All rights reserved.</p>
+    <div class="footer__legal">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="sms-terms.html">SMS Terms</a>
+      <a href="sms-consent.html">SMS Consent Example</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
