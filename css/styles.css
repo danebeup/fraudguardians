@@ -943,6 +943,23 @@ p { color: var(--text-mid); }
 .footer__legal a { font-size: .82rem; color: rgba(255,255,255,.4); transition: color var(--transition); }
 .footer__legal a:hover { color: var(--white); }
 
+.footer__bottom-text { display: flex; flex-direction: column; gap: 4px; }
+.footer__ownership { font-size: .72rem; color: rgba(255,255,255,.35); }
+
+/* ── Sole-proprietor ownership statement (non-footer placements) ── */
+.ownership-note { font-size: .82rem; color: var(--text-light); }
+.legal-content__ownership {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--gray-200);
+}
+.about-ownership {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px 48px;
+  text-align: center;
+}
+
 /* ── About Page ── */
 .page-hero {
   background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-mid) 100%);
